@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>修改元素</title>
+</head>
+
+<body>
+    <div></div>
+</body>
+<script>
+    let div = document.getElementsByTagName("div")[0];
+    div.innerText = "你好，世界";
+    div.setAttribute("style", "background-color: red;");
+    div.style.color = "yellow";
+</script>
+
+</html>

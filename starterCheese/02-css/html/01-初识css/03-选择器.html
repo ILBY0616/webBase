@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <style>
+        /*通配符选择器：选中所有标签，设置相同样式，一般用来清除默认样式*/
+        * {
+            color: blue;
+        }
+
+        /*标签选择器：选中同名标签，设置同样样式*/
+        p {
+            color: red;
+        }
+
+        /*类选择器：选中同类标签，设置同样样式*/
+        /*一个class选择器可以被多个标签使用*/
+        /*一个标签可以使用多个class选择器值*/
+        .blue {
+            color: orange;
+        }
+
+        .size {
+            font-size: 17px;
+        }
+
+        /*id选择器：选中指定标签，设置指定样式，在一个页面只能生效一次*/
+        /*id选择器：配合javascript使用，很少用来设置CSS样式*/
+        #green {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <span>这是使用通配选择器的span标签</span>
+    <p>这是使用标签选择器的p标签</p>
+    <div class="blue size">这是使用类选择器的div标签</div>
+    <div id="green">这是使用id选择器的div标签</div>
+</body>
+
+</html>

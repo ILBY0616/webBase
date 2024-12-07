@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>文字属性-复合写法</title>
+    <style>
+        p {
+            /*font:是否倾斜 是否加粗 字号/行高 字体;*/
+            /*必须按顺序书写，字号和字体是必须属性，没有则不生效*/
+            font: italic 700 50px/1 楷体;
+
+            /*颜色*/
+            color: gray;
+            /*缩进，单位有px和em，em表示当前标签字号大小。*/
+            text-indent: 2em;
+            /*水平对齐方式,包含缩进，包括left、center、right三种方式。*/
+            text-align: center;
+            /*下滑线，值设为none可以去掉其他标签的下划线。*/
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        乾坤未定，你我皆是黑马
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>添加元素</title>
+</head>
+
+<body>
+</body>
+<script>
+  let oldBody = document.querySelector("body");
+  let newDiv = document.createElement("div");
+  newDiv.innerText = "新建div";
+  newDiv.style.color = "red";
+  oldBody.appendChild(newDiv);
+</script>
+
+</html>

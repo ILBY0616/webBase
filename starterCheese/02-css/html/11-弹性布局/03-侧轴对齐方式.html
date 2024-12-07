@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>侧轴对齐方式</title>
+    <style>
+        /*align-items属性针对所有子级元素，有值flex-start、flex-end、center、stretch*/
+        .f1 {
+            display: flex;
+            align-items: flex-start;
+            width: auto;
+            height: 150px;
+            border: 1px solid red;
+        }
+
+        .f2 {
+            display: flex;
+            align-items: flex-end;
+            width: auto;
+            height: 150px;
+            border: 1px solid red;
+        }
+
+        .f3 {
+            display: flex;
+            align-items: center;
+            width: auto;
+            height: 150px;
+            border: 1px solid red;
+        }
+
+        .f4 {
+            display: flex;
+            align-items: stretch;
+            width: auto;
+            height: 150px;
+            border: 1px solid red;
+        }
+
+        /*align-self属性针对指定子级元素，有值flex-start、flex-end、center、stretch*/
+        .f5 {
+            display: flex;
+            width: auto;
+            height: 150px;
+            border: 1px solid red;
+        }
+
+        .s1 {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            text-align: center;
+        }
+
+        .s2 {
+            width: 200px;
+            /*height: 100px;*/
+            background-color: pink;
+            text-align: center;
+        }
+
+        .s3:nth-child(1) {
+            align-self: flex-start;
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            text-align: center;
+        }
+
+        .s3:nth-child(2) {
+            align-self: center;
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            text-align: center;
+        }
+
+        .s3:nth-child(3) {
+            align-self: flex-end;
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="f1">
+        <div class="s1">1</div>
+        <div class="s1">flex-start：默认值，从起点到终点排列</div>
+        <div class="s1">3</div>
+    </div>
+    <div class="f2">
+        <div class="s1">1</div>
+        <div class="s1">flex-end：从终点到起点排列</div>
+        <div class="s1">3</div>
+    </div>
+    <div class="f3">
+        <div class="s1">1</div>
+        <div class="s1">center：居中排列</div>
+        <div class="s1">3</div>
+    </div>
+    <div class="f4">
+        <div class="s2">1</div>
+        <div class="s2">stretch：子级元素没有高度，高度自动拉伸</div>
+        <div class="s2">3</div>
+    </div>
+    <div class="f5">
+        <div class="s3"></div>
+        <div class="s3"></div>
+        <div class="s3"></div>
+    </div>
+</body>
+
+</html>

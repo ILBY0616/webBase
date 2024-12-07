@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .parent {
+            width: 200px;
+            height: 220px;
+            margin: 220px auto;
+            background-color: yellow;
+        }
+
+        .child {
+            margin: 10px 0;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .child:hover {
+            animation: jump 1s ease-out infinite alternate;
+        }
+
+        @keyframes jump {
+            0% {
+                transform: translateY(-10px);
+            }
+
+            50% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child">animation: 动画名称 动画时间 动画曲线 播放次数 播放方向;</div>
+    </div>
+</body>
+
+</html>

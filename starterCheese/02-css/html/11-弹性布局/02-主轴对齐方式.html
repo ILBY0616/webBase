@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>主轴对齐方式</title>
+    <style>
+        .f1 {
+            display: flex;
+            justify-content: flex-start;
+            width: auto;
+            height: 125px;
+            border: 1px solid red;
+        }
+
+        .f2 {
+            display: flex;
+            justify-content: flex-end;
+            width: auto;
+            height: 125px;
+            border: 1px solid red;
+        }
+
+        .f3 {
+            display: flex;
+            justify-content: center;
+            width: auto;
+            height: 125px;
+            border: 1px solid red;
+        }
+
+        .f4 {
+            display: flex;
+            justify-content: space-between;
+            width: auto;
+            height: 125px;
+            border: 1px solid red;
+        }
+
+        .f5 {
+            display: flex;
+            justify-content: space-around;
+            width: auto;
+            height: 125px;
+            border: 1px solid red;
+        }
+
+        .f6 {
+            display: flex;
+            justify-content: space-evenly;
+            width: auto;
+            height: 125px;
+            border: 1px solid red;
+        }
+
+        .s {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="f1">
+        <div class="s">1</div>
+        <div class="s">flex-start：默认值，从起点到终点排列</div>
+        <div class="s">3</div>
+    </div>
+    <div class="f2">
+        <div class="s">1</div>
+        <div class="s">flex-end：从终点到起点排列</div>
+        <div class="s">3</div>
+    </div>
+    <div class="f3">
+        <div class="s">1</div>
+        <div class="s">center：居中排列</div>
+        <div class="s">3</div>
+    </div>
+    <div class="f4">
+        <div class="s">1</div>
+        <div class="s">space-between：弹性盒子间距相等</div>
+        <div class="s">3</div>
+    </div>
+    <div class="f5">
+        <div class="s">1</div>
+        <div class="s">space-around：弹性盒子两侧外边距相等</div>
+        <div class="s">3</div>
+    </div>
+    <div class="f6">
+        <div class="s">1</div>
+        <div class="s">space-evenly：所有间距相等</div>
+        <div class="s">3</div>
+    </div>
+</body>
+
+</html>

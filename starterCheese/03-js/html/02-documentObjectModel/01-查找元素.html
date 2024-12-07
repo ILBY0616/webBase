@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>查找元素</title>
+</head>
+
+<body>
+    <div id="idSelector01"></div>
+    <div id="idSelector02"></div>
+    <label>
+        <input type="checkbox" name="nameSelector">
+        <input type="checkbox" name="nameSelector">
+    </label>
+    <div class="classSelector"></div>
+    <div class="classSelector"></div>
+    <div class="classSelector"></div>
+    <div class="classSelector"></div>
+    <div></div>
+    <div></div>
+</body>
+<script>
+    let idSelector01 = document.getElementById("idSelector01");
+    idSelector01.innerText = "返回node01"
+    let nameSelectors = document.getElementsByName("nameSelector");
+    nameSelectors[0].checked = true;
+    nameSelectors[1].checked = true;
+    let classSelectors = document.getElementsByClassName("classSelector");
+    classSelectors[0].innerText = "返回nodeList03";
+    classSelectors[1].innerText = "返回nodeList04";
+    let tagSelectors = document.getElementsByTagName("div");
+    tagSelectors[6].innerText = "返回nodeList07";
+    tagSelectors[7].innerText = "返回nodeList08";
+    let querySelector = document.querySelector("#idSelector02");
+    querySelector.innerText = "返回node02"
+    let querySelectors = document.querySelectorAll(".classSelector");
+    querySelectors[2].innerText = "返回nodeList05"
+    querySelectors[3].innerText = "返回nodeList06"
+</script>
+
+</html>

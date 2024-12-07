@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 144px;
+    height: 26px;
+    margin: auto auto;
+    background-color: #999999;
+}
+
+.dropdown {
+    float: left;
+    position: relative;
+}
+
+.dropdown:hover .content {
+    display: block;
+}
+
+.content {
+    display: none;
+    position: absolute;
+    background-color: #dddddd;
+    z-index: 1;
+}
+
+.content a {
+    display: block;
+    padding: 12px 16px;
+}
+
+.content a:hover {
+    background-color: #dddddd;
+}
+
+.content .enlarge {
+    transform: scale(1.2);
+}

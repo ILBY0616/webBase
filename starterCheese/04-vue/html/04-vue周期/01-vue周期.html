@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue周期</title>
+    <script src="../../js/vue@2.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input v-model="message">
+        <h1>{{ message }}</h1>
+    </div>
+</body>
+
+<script>
+    let app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello, Vue!'
+        },
+        beforeCreate() {
+            console.log('beforeCreate: 实例初始化之后，数据观测和事件配置之前调用');
+        },
+        created() {
+            console.log('created: 实例已经创建完成，数据观测和事件配置完成');
+        },
+        beforeMount() {
+            console.log('beforeMount: 模板编译/挂载之前调用');
+        },
+        mounted() {
+            console.log('mounted: 模板编译/挂载之后调用');
+        },
+        beforeUpdate() {
+            console.log('beforeUpdate: 数据更新之前调用');
+        },
+        updated() {
+            console.log('updated: 数据更新之后调用');
+        },
+        beforeDestroy() {
+            console.log('beforeDestroy: 实例销毁之前调用');
+        },
+        destroyed() {
+            console.log('destroyed: 实例销毁之后调用');
+        }
+    });
+</script>
+
+</html>

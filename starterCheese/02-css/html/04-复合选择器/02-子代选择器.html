@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>子代选择器</title>
+    <style>
+        /*子代选择器：父选择器>子选择器 {}，会选中所有子代选择器*/
+        div>span {
+            color: gray;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>儿子</span>
+        <p>
+            <span>孙子</span>
+        </p>
+    </div>
+</body>
+
+</html>

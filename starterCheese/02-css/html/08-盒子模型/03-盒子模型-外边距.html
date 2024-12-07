@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型-外边距</title>
+    <style>
+        #d1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+
+            /*四个方向同时设置*/
+            margin: 20px;
+        }
+
+        #d2 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+
+            /*四个方向单独设置：上top 右right 下bottom 左left*/
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+
+        /*从上开始顺时针旋转，当某方向没有值时取对面值*/
+        #d3 {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+
+            /*四值写法*/
+            margin: 20px 20px 20px 20px;
+        }
+
+        #d4 {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+
+            /*三值写法*/
+            margin: 20px 20px 20px;
+        }
+
+        #d5 {
+            width: 200px;
+            height: 200px;
+            background-color: cyan;
+
+            /*二值写法*/
+            margin: 20px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1">d1</div>
+    <div id="d2">d2</div>
+    <div id="d3">d3</div>
+    <div id="d4">d4</div>
+    <div id="d5">d5</div>
+</body>
+
+</html>

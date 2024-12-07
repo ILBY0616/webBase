@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表格标签</title>
+</head>
+
+<body>
+    <!-- tr为行，td为单元格，th为表头 -->
+    <table>
+        <tr>
+            <th>姓名</th>
+            <th>语文</th>
+            <th>数学</th>
+            <th>总分</th>
+        </tr>
+        <tr>
+            <td>邱鹏</td>
+            <td>120</td>
+            <td>120</td>
+            <td>240</td>
+        </tr>
+        <tr>
+            <td>邱洁</td>
+            <td>119</td>
+            <td>119</td>
+            <td>238</td>
+        </tr>
+    </table>
+    <!-- thead、tbody、tfoot -->
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>语文</th>
+                <th>数学</th>
+                <th>总分</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>邱鹏</td>
+                <td>120</td>
+                <td>120</td>
+                <td>240</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>邱洁</td>
+                <td>119</td>
+                <td>119</td>
+                <td>238</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- 从左上到有右下 -->
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>语文</th>
+                <th>数学</th>
+                <th>总分</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>邱鹏</td>
+                <td>120</td>
+                <td rowspan="2">120</td>
+                <td>240</td>
+            </tr>
+            <tr>
+                <td>邱洁</td>
+                <td>119</td>
+                <td>239</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>总结</td>
+                <td colspan="3">世界第一聪明</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.father {
+    width: 800px;
+    height: 360px;
+    overflow: hidden;
+}
+
+.son {
+    display: flex;
+    width: 2400px;
+    height: 360px;
+    transition: transform 3s ease-in-out;
+    /* 过渡效果：3秒，缓入缓出 */
+    animation: slide 9s infinite;
+    /* 每个图像3秒，总时长9秒，无限循环 */
+}
+
+.son img {
+    width: 800px;
+    height: 360px;
+    object-fit: cover;
+}
+
+@keyframes slide {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    33.33% {
+        transform: translateX(-800px);
+    }
+
+    66.66% {
+        transform: translateX(-1600px);
+    }
+}

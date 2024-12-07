@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>浮动布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #d1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /*左浮动*/
+            float: left;
+
+        }
+
+        #d2 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /*右浮动*/
+            float: right;
+        }
+
+        #d3 {
+            width: 400px;
+            height: 200px;
+            background-color: yellow;
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1;
+            font-style: italic;
+            font-family: 楷体, sans-serif;
+
+            text-indent: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1">
+        <p>
+            标准流指的是标签在页面中默认的排列规则（显示模式），例如：块级元素独占一行，行内元素一行显示多个。
+        </p>
+    </div>
+    <div id="d2">
+        <p>
+            实际工作中，块级元素需要通过浮动布局在一行显示多个，其特点是顶对齐，行内多个，脱标
+        </p>
+    </div>
+    <div id="d3">
+        <p>
+            脱标的盒子不占用标准流盒子的”位置“。浮动看得到不浮动，不浮动看不到浮动。
+        </p>
+    </div>
+</body>
+
+</html>

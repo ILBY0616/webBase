@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>外边距问题-合并</title>
+    <!-- 块级元素中，仅当上下相邻外边距时，取值大的外边距作为盒子上下间距 -->
+    <style>
+        #d1 {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            margin-bottom: 50px;
+        }
+
+        #d2 {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册信息</title>
+</head>
+
+<body>
+    <form>
+        <h1>注册信息</h1>
+        <hr>
+
+        <h3>个人信息</h3>
+        <label>
+            用户名：
+            <input type="text" placeholder="输入用户名">
+            <br>
+        </label>
+        <label>
+            密码：
+            <input type="password" placeholder="输入密码">
+            <br>
+        </label>
+        <label>
+            确认密码：
+            <input type="password" placeholder="确认密码">
+            <br>
+        </label>
+        <label>
+            性别：
+            <label>
+                <input type="radio" name="gender" checked>男
+            </label>
+            <label>
+                <input type="radio" name="gender">女
+            </label>
+            <br>
+        </label>
+        <label>
+            居住城市：
+            <select>
+                <option>北京</option>
+                <option>上海</option>
+                <option>广州</option>
+                <option selected>深圳</option>
+            </select>
+            <br>
+        </label>
+
+        <h3>教育经历</h3>
+        <label>
+            最高学位：
+            <select>
+                <option>学士</option>
+                <option>硕士</option>
+                <option>博士</option>
+            </select>
+            <br>
+        </label>
+        <label>
+            学校名称：
+            <input type="text">
+            <br>
+        </label>
+        <label>
+            所学专业：
+            <input type="text">
+            <br>
+        </label>
+        <label>
+            在校时间：
+            <select>
+                <option>2003</option>
+                <option>2004</option>
+                <option>2005</option>
+            </select>
+            --
+            <select>
+                <option>2007</option>
+                <option>2008</option>
+                <option>2009</option>
+            </select>
+            <br>
+        </label>
+
+        <h3>工作经历</h3>
+        <label>
+            公司名称：
+            <input type="text">
+            <br>
+        </label>
+        <label>
+            工作描述：
+            <textarea placeholder="请描述"></textarea>
+            <br>
+        </label>
+        <label>
+            <input type="checkbox" checked>已阅读并同意以下协议：
+        </label>
+        <ul>
+            <li>
+                <a href="#">《服务协议》</a>
+            </li>
+            <li>
+                <a href="#">《隐私政策》</a>
+            </li>
+        </ul>
+        <button type="submit">立即注册</button>
+        <button type="reset">重置信息</button>
+        <button type="button">返回登录</button>
+    </form>
+</body>
+
+</html>

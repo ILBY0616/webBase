@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三级联动下拉框</title>
+</head>
+
+<body>
+    <div id="firstGroup">
+        <select style="width: 150px;"></select>
+        <select style="width: 150px;"></select>
+        <select style="width: 150px;"></select>
+    </div>
+    <div id="secondGroup">
+        <select style="width: 150px;"></select>
+        <select style="width: 150px;"></select>
+        <select style="width: 150px;"></select>
+    </div>
+</body>
+<script src="../js/07-region.js"></script>
+<script src="../js/08-三级联动下拉框.js"></script>
+<script>
+    new DistrictCascading(document.getElementById('firstGroup'));
+    new DistrictCascading(document.getElementById('secondGroup'));
+</script>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue入门</title>
+    <!-- 引入 -->
+    <script src="../../js/vue@2.js"></script>
+</head>
+
+<body>
+    <!-- 视图 -->
+    <div id="app">
+        <div>{{ message }}</div>
+        <div>{{ student.id}}</div>
+        <div>{{ student.name}}</div>
+        <div>{{score[0]}}</div>
+        <div>{{score[1]}}</div>
+        <div>{{score[2]}}</div>
+        <div>{{score[3]}}</div>
+    </div>
+</body>
+
+<Script>
+    // 数据
+    let app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            student: {
+                id: '202114060108',
+                name: '邱鹏'
+            },
+            score: [
+                '120', '120', '70', '70'
+            ]
+        }
+    })
+</Script>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素选择器</title>
+    <!-- 伪元素选择器必须设置content属性，值可以为空，默认行内显示模式，优先级与标签选择器相同 -->
+    <style>
+        div {
+            width: 90px;
+            height: 90px;
+            background-color: skyblue;
+        }
+
+        /*在div元素里面最前面添加一个伪元素*/
+        div::before {
+            content: "老鼠";
+            background-color: red;
+        }
+
+        /*在div元素里面最后面添加一个伪元素*/
+        div::after {
+            content: "大米";
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        爱
+    </div>
+</body>
+
+</html>

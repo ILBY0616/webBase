@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>文字属性-拆分写法</title>
+    <style>
+        p {
+            /*是否倾斜，normal表示正常，italic表示倾斜*/
+            font-style: italic;
+            /*粗细，400或normal表示正常，700或bold表示加粗*/
+            font-weight: bold;
+            /*字号，值必须要有单位，否则不生效。谷歌浏览器默认font-size为16px*/
+            font-size: 50px;
+            /*行高，包括上间距、下间距和文本高度。如果值是数字则表示是字体大小的倍数*/
+            line-height: 50px;
+            /*字体，可以写多个值用,隔开，从左到右找到第一个就使用。
+			如果都没有就使用电脑默认字体，为了规范，最后一个统一sans-serif*/
+            font-family: 楷体, 宋体, sans-serif;
+
+            /*颜色*/
+            color: gray;
+            /*缩进，单位有px和em，em表示当前标签字号大小。*/
+            text-indent: 2em;
+            /*水平对齐方式,包含缩进，包括left、center、right三种方式。*/
+            text-align: center;
+            /*下滑线，值设为none可以去掉其他标签的下划线。*/
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        乾坤未定，你我皆是黑马
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>交集选择器</title>
+    <style>
+        /*交集选择器：选择器1.选择器2…{}，会选中满足条件的选择器。如果含有标签选择器，标签选择器要排在最前面*/
+        .purple {
+            color: purple;
+        }
+
+        p.purple {
+            font-size: 50px;
+            font-family: 楷体, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <p>p</p>
+    <div class="purple">purple</div>
+    <p class="purple">p.purple</p>
+</body>
+
+</html>

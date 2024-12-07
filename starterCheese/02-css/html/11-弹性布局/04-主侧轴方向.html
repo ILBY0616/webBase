@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>主侧轴方向</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .f1 {
+            display: flex;
+            /*默认主轴方向水平，侧轴方向垂直于主轴*/
+            flex-direction: row;
+            width: auto;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+        .f2 {
+            display: flex;
+            /*默认主轴方向竖直，侧轴方向垂直于主轴*/
+            flex-direction: column;
+            width: auto;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+        .f3 {
+            display: flex;
+            /*默认主轴方向水平，侧轴方向垂直于主轴，从右到左*/
+            flex-direction: row-reverse;
+            width: auto;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+        .f4 {
+            display: flex;
+            /*默认主轴方向竖直，侧轴方向垂直于主轴，从下到上*/
+            flex-direction: column-reverse;
+            width: auto;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+        .s {
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="f1">
+        <div class="s">1</div>
+        <div class="s">2</div>
+        <div class="s">3</div>
+    </div>
+    <div class="f2">
+        <div class="s">1</div>
+        <div class="s">2</div>
+        <div class="s">3</div>
+    </div>
+    <div class="f3">
+        <div class="s">1</div>
+        <div class="s">2</div>
+        <div class="s">3</div>
+    </div>
+    <div class="f4">
+        <div class="s">1</div>
+        <div class="s">2</div>
+        <div class="s">3</div>
+    </div>
+</body>
+
+</html>

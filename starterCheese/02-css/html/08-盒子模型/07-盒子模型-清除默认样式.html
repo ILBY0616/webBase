@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型-清除默认样式</title>
+    <style>
+        /*可以替换成默认有边距的标签的并集选择器*/
+        * {
+            /*清除自带内外边距*/
+            padding: 0;
+            margin: 0;
+
+            /*设置内减模式*/
+            box-sizing: border-box;
+        }
+
+        li {
+            /*清除列表序号*/
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>h1</h1>
+    <p>p</p>
+    <ul>
+        <li>li</li>
+    </ul>
+</body>
+
+</html>

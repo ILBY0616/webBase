@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型-圆角属性</title>
+    <style>
+        /*border-radius是圆角半径的值，也可以用百分比表示，百分比对象是height*/
+        #d1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 100px;
+        }
+
+        #d2 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        /*从左上角开始顺时针旋转，当某角没有值时取对角值*/
+        #d3 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+
+            /*四值写法*/
+            border-radius: 25px 50px 75px 100px;
+        }
+
+        #d4 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+
+            /*三值写法*/
+            border-radius: 25px 50px 75px;
+        }
+
+        #d5 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+
+            /*二值写法*/
+            border-radius: 25px 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+</body>
+
+</html>

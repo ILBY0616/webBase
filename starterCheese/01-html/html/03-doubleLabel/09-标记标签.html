@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>label标签</title>
+</head>
+
+<body>
+    <!-- label标签作用：说明标签，增大点击范围。 -->
+    性别：
+    <!-- 方式一：直接包裹 -->
+    <label><input type="radio" name="gender" checked>男</label>
+    <label><input type="radio" name="gender">女</label>
+    <br>
+    父母：
+    <!-- 方式二：利用id for -->
+    <input type="radio" name="parent" id="father" checked><label for="father">父亲</label>
+    <input type="radio" name="parent" id="mother"><label for="mother">母亲</label>
+    <br>
+</body>
+
+</html>

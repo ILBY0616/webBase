@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>2d变换</title>
+    <style>
+        /*移动、缩放、旋转、倾斜*/
+        .div01 {
+            width: 200px;
+            height: 200px;
+            background: red;
+
+        }
+
+        .div01:hover {
+            /*transform: translateX(200px);*/
+            /*transform: translateY(200px);*/
+            transform: translate(50px, 0px);
+        }
+
+        .div02 {
+            width: 200px;
+            height: 200px;
+            background: orange;
+        }
+
+        .div02:hover {
+            /*transform: scaleX(1.2);*/
+            /*transform: scaleY(1.2);*/
+            transform: scale(1.2, 1.2);
+        }
+
+        .div03 {
+            width: 200px;
+            height: 200px;
+            background: yellow;
+        }
+
+        .div03:hover {
+            transform: rotate(45deg);
+        }
+
+        .div04 {
+            width: 200px;
+            height: 200px;
+            background: green;
+        }
+
+        .div04:hover {
+            /*transform: skewX(30deg);*/
+            /*transform: skewY(30deg);*/
+            transform: skew(30deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div01"></div>
+    <div class="div02"></div>
+    <div class="div03"></div>
+    <div class="div04"></div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>过渡</title>
+    <style>
+        .div01 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            transition: transform 1s ease-in-out;
+        }
+
+        .div01:hover {
+            transform: translateX(200px);
+        }
+
+        .div02 {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+
+        .div02:hover {
+            transform: translateX(200px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div01">
+        transition: 过渡属性 过渡时间 过渡曲线 延迟时间;
+    </div>
+    <div class="div02">
+        transition: 过渡属性 过渡时间 过渡曲线 延迟时间;
+    </div>
+</body>
+
+</html>

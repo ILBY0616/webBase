@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标事件</title>
+    <style>
+        .center {
+            width: 400px;
+            height: 200px;
+            margin: 200px auto;
+            overflow: hidden;
+        }
+
+        .left {
+            float: left;
+            width: 200px;
+            height: 200px;
+            color: yellow;
+            font-weight: bold;
+            text-align: center;
+            line-height: 200px;
+            background-color: red;
+        }
+
+        .right {
+            float: left;
+            width: 200px;
+            height: 200px;
+            color: red;
+            font-weight: bold;
+            text-align: center;
+            line-height: 200px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+<script>
+    let left = document.querySelector(".left");
+    let right = document.querySelector(".right");
+    left.onmouseover = function () {
+        right.innerText = "你的鼠标正在悬浮";
+    }
+    left.onmousedown = function () {
+        right.innerText = "你的鼠标正在按下";
+    }
+    left.onmouseup = function () {
+        right.innerText = "你的鼠标正在释放";
+    }
+    left.onmouseout = function () {
+        right.innerText = "你的鼠标正在离开";
+    }
+</script>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>弹性行对齐</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .f1 {
+            display: flex;
+            /*align-content对单行盒子不生效*/
+            flex-wrap: wrap;
+            align-content: flex-start;
+            width: 300px;
+            height: 130px;
+            border: 1px red solid;
+        }
+
+        .f2 {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-end;
+            width: 300px;
+            height: 130px;
+            border: 1px red solid;
+        }
+
+        .f3 {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            width: 300px;
+            height: 130px;
+            border: 1px red solid;
+        }
+
+        .f4 {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            width: 300px;
+            height: 130px;
+            border: 1px red solid;
+        }
+
+        .f5 {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+            width: 300px;
+            height: 130px;
+            border: 1px red solid;
+        }
+
+        .f6 {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-evenly;
+            width: 300px;
+            height: 130px;
+            border: 1px red solid;
+        }
+
+        .s {
+            width: 100px;
+            height: 50px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="f1">
+        <div class="s">1</div>
+        <div class="s">2</div>
+        <div class="s">3</div>
+        <div class="s">4</div>
+        <div class="s">5</div>
+        <div class="s">6</div>
+    </div>
+    <div class="f2">
+        <div class="s">1</div>
+        <div class="s">2</div>
+        <div class="s">3</div>
+        <div class="s">4</div>
+        <div class="s">5</div>
+        <div class="s">6</div>
+    </div>
+    <div class="f3">
+        <div class="s">1</div>
+        <div class="s">2</div>
+        <div class="s">3</div>
+        <div class="s">4</div>
+        <div class="s">5</div>
+        <div class="s">6</div>
+    </div>
+    <div class="f4">
+        <div class="s">1</div>
+        <div class="s">2</div>
+        <div class="s">3</div>
+        <div class="s">4</div>
+        <div class="s">5</div>
+        <div class="s">6</div>
+    </div>
+    <div class="f5">
+        <div class="s">1</div>
+        <div class="s">2</div>
+        <div class="s">3</div>
+        <div class="s">4</div>
+        <div class="s">5</div>
+        <div class="s">6</div>
+    </div>
+    <div class="f6">
+        <div class="s">1</div>
+        <div class="s">2</div>
+        <div class="s">3</div>
+        <div class="s">4</div>
+        <div class="s">5</div>
+        <div class="s">6</div>
+    </div>
+</body>
+
+</html>

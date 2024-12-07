@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>优先级</title>
+    <style>
+        /*优先级：!important > 行内样式 > ID选择器 > 类选择器 > 标签选择器 > 通配选择器 > 继承样式*/
+        /*范围越大，级别越低*/
+        .c1 .c2 div {
+            color: red;
+        }
+
+        div #b3 {
+            color: orange;
+        }
+
+        #b1 .c3 {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body style="background-color: black; text-align: center">
+    <!-- 判断顺序：先找!important和继承，再找最大标签级，级别相同比个数，再同就往下级比 -->
+    <div class="c1" id="b1">
+        <div class="c2" id="b2">
+            <div class="c3" id="b3">
+                猜一猜：这行文本是什么颜色
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

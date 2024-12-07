@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>随机整数</title>
+    <style>
+        .center {
+            width: 400px;
+            height: 200px;
+            margin: 200px auto;
+            overflow: hidden;
+        }
+
+        .left {
+            float: left;
+            width: 200px;
+            height: 200px;
+            color: yellow;
+            font-weight: bold;
+            text-align: center;
+            line-height: 200px;
+            background-color: red;
+        }
+
+        .right {
+            float: left;
+            width: 200px;
+            height: 200px;
+            color: red;
+            font-weight: bold;
+            text-align: center;
+            line-height: 200px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+<script>
+    let left = document.querySelector(".left");
+    let right = document.querySelector(".right");
+    // 随机生成[0, 1)内的浮点数
+    let number = Math.random();
+    left.onmousedown = function () {
+        left.innerText = "随机生成[0, 10)内的浮点数";
+        right.innerText = number * 10;
+    }
+    left.onmouseup = function () {
+        left.innerText = "随机生成[0, 10)内的正整数";
+        right.innerText = Math.floor(number * 10);
+    }
+</script>
+
+</html>

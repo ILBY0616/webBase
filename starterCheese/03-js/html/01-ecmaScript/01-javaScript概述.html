@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript概述</title>
+    <script src="../../js/01-执行顺序.js"></script>
+    <style>
+        div {
+            text-indent: 2em;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        JavaScript功能：
+        JavaScript是一种极其简单的脚本语言，其源程序由浏览器内置的JavaScript解释器动态处理成可执行代码，
+        不被运行访问本地硬盘，只能用于实现信息的的动态交互。<br>
+    </div>
+    <div>
+        JavaScript组成：
+        核心：ECMAScript，定义脚本语言的所有属性、方法、和对象。
+        文档对象模型：DOM，控制文档树（html或xml文件）的内容和结构。
+        浏览器对象模型：BOM，处理浏览器窗口的事件。<br>
+    </div>
+    <div>
+        JavaScript使用：
+        外部脚本：一般在title标签里面引用。
+        内部脚本：在script标签里面编写脚本。
+        行内脚本：用事件句柄编写脚本。<br>
+    </div>
+    <div>
+        JavaScript执行：
+        JavaScript代码可以分为事件代码和非事件代码。
+        首先从上到下执行非事件代码，然后执行事件代码。<br>
+        <button id="b01">点击事件</button>
+    </div>
+</body>
+
+</html>

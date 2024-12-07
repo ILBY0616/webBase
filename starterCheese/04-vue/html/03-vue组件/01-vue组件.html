@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue组件</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <!-- 组件使用 -->
+    <div id="app01">
+        <ul>
+            <todo-item v-for="todo in todoList" v-bind:key="todo.id" v-bind:todo="todo.text"></todo-item>
+        </ul>
+    </div>
+    <div id="app02">
+        <counter></counter>
+        <p>{{ message }}</p>
+        <button @click="reverseMessage">反转消息</button>
+    </div>
+</body>
+
+<script>
+    let app01 = new Vue({
+        el: '#app01',
+        data: {
+            todoList: [
+                { id: 0, text: '蔬菜' },
+                { id: 1, text: '奶酪' },
+                { id: 2, text: '随便其它什么人吃的东西' }
+            ]
+        },
+        components: {
+            // 组件名称
+            'todo-item': {
+                // 组件属性
+                props: ['todo'],
+                // 组件模板
+                template: '<li>todo : {{ todo }}</li>'
+            }
+        }
+    });
+
+    let app02 = new Vue({
+        el: '#app02',
+        data: {
+            message: 'Hello, Vue!'
+        },
+        methods: {
+            reverseMessage() {
+                this.message = this.message.split('').reverse().join('');
+            }
+        },
+        components: {
+            'counter': {
+                template:
+                    `
+                    <div>
+                        <p>计数器: {{ count }}</p>
+                        <button @click="increment">增加</button>
+                        <button @click="decrement">减少</button>
+                    </div>
+                    `
+                ,
+                data() {
+                    return {
+                        count: 0
+                    };
+                },
+                methods: {
+                    increment() {
+                        this.count++;
+                    },
+                    decrement() {
+                        this.count--;
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>亮灭灯泡</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        .s01 {
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <img src="../resource/image/night_bulb.gif" id="i01" alt="开灯"><br>
+            <input type="button" value="开灯" id="b01">
+        </div>
+        <div>
+            <label>
+                更换页面背景颜色
+                <select class="s01">
+                    <option value="white">请选择背景颜色</option>
+                    <option value="pink">粉红色</option>
+                    <option value="olive">橄榄色</option>
+                    <option value="green">浅绿色</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <p id="p01">点击这里更换HTML内容</p>
+        </div>
+    </div>
+</body>
+<script>
+    let i01 = document.getElementById("i01");
+    let b01 = document.getElementById("b01");
+    b01.onclick = function () {
+        if (b01.value === "开灯") {
+            i01.src = "../resource/image/light_bulb.gif";
+            b01.value = "关灯";
+        } else {
+            i01.src = "../resource/image/night_bulb.gif";
+            b01.value = "开灯";
+        }
+    }
+
+    let s01 = document.getElementsByClassName("s01")[0];
+    s01.onchange = function () {
+        document.getElementsByTagName("body")[0].style.backgroundColor = this.value;
+    }
+
+    let p01 = document.getElementById("p01");
+    p01.onclick = function () {
+        p01.innerText = "这是更改的文字";
+    }
+</script>
+
+</html>

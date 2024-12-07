@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缴费账单</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .header img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .fee-item {
+            border-bottom: 1px solid #eee;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .fee-item:last-child {
+            border-bottom: none;
+        }
+
+        .fee-details {
+            flex: 1;
+        }
+
+        .fee-amount {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .checkbox {
+            margin-right: 10px;
+        }
+
+        .total {
+            text-align: right;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .pay-button {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px auto 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="title">缴费平台 - 学杂费</span>
+        </div>
+        <div class="fee-item">
+            <input type="checkbox" class="checkbox" id="fee1" checked data-amount="3086">
+            <label for="fee1" class="fee-details">
+                <div>24.9-25.6/24.3-25.2-专业学费</div>
+                <div>收费标准: ¥3,086.00</div>
+                <div>已交金额: ¥0.00</div>
+                <div>欠费金额: ¥3,086.00</div>
+            </label>
+            <div class="fee-amount">¥3,086.00</div>
+        </div>
+        <div class="fee-item">
+            <input type="checkbox" class="checkbox" id="fee2" checked data-amount="3014">
+            <label for="fee2" class="fee-details">
+                <div>24.9-25.6/24.3-25.2-学分学费</div>
+                <div>收费标准: ¥3,014.00</div>
+                <div>已交金额: ¥0.00</div>
+                <div>欠费金额: ¥3,014.00</div>
+            </label>
+            <div class="fee-amount">¥3,014.00</div>
+        </div>
+        <div class="fee-item">
+            <input type="checkbox" class="checkbox" id="fee3" checked data-amount="800">
+            <label for="fee3" class="fee-details">
+                <div>24.9-25.6/24.3-25.2-住宿费</div>
+                <div>收费标准: ¥800.00</div>
+                <div>已交金额: ¥0.00</div>
+                <div>欠费金额: ¥800.00</div>
+            </label>
+            <div class="fee-amount">¥800.00</div>
+        </div>
+        <div class="fee-item">
+            <input type="checkbox" class="checkbox" id="fee4" checked data-amount="50">
+            <label for="fee4" class="fee-details">
+                <div>24.9-25.6/24.3-25.2-空调使用维护费</div>
+                <div>收费标准: ¥50.00</div>
+                <div>已交金额: ¥0.00</div>
+                <div>欠费金额: ¥50.00</div>
+            </label>
+            <div class="fee-amount">¥50.00</div>
+        </div>
+        <div class="fee-item">
+            <input type="checkbox" class="checkbox" id="fee5" checked data-amount="557">
+            <label for="fee5" class="fee-details">
+                <div>23.9-24.6/23.3-24.2-书籍费</div>
+                <div>收费标准: ¥557.00</div>
+                <div>已交金额: ¥0.00</div>
+                <div>欠费金额: ¥557.00</div>
+            </label>
+            <div class="fee-amount">¥557.00</div>
+        </div>
+        <div class="fee-item">
+            <input type="checkbox" class="checkbox" id="fee6" data-amount="400">
+            <label for="fee6" class="fee-details">
+                <div>24.9-25.6/24.3-25.2-医疗保险</div>
+                <div>收费标准: ¥400.00</div>
+                <div>已交金额: ¥0.00</div>
+                <div>欠费金额: ¥400.00</div>
+            </label>
+            <div class="fee-amount">¥400.00</div>
+        </div>
+        <div class="total" id="total-amount">缴费总额: ¥7,307.00</div>
+        <a href="#" class="pay-button">去支付</a>
+    </div>
+
+    <script>
+        function updateTotalAmount() {
+            let total = 0;
+            const checkboxes = document.querySelectorAll('.checkbox');
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    total += parseFloat(checkbox.getAttribute('data-amount'));
+                }
+            });
+            document.getElementById('total-amount').innerText = `缴费总额: ¥${total.toFixed(2)}`;
+        }
+
+        // 为每个复选框添加事件监听器
+        const checkboxes = document.querySelectorAll('.checkbox');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateTotalAmount);
+        });
+
+        // 初始计算总金额
+        updateTotalAmount();
+    </script>
+</body>
+
+</html>

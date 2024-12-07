@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>背景属性-缩放属性</title>
+    <style>
+        #d1 {
+            width: 500px;
+            height: 700px;
+            background-color: black;
+            background-image: url(../../resource/image/云缨.jpg);
+            background-repeat: no-repeat;
+            /*等比例放入背景区，到最长边结束，可能部分图片看不见*/
+            background-size: cover;
+
+        }
+
+        #d2 {
+            width: 500px;
+            height: 700px;
+            background-color: black;
+            background-image: url(../../resource/image/云缨.jpg);
+            background-repeat: no-repeat;
+            /*等比例放入背景区，到最短边结束，可能部分背景区空白*/
+            background-size: contain;
+        }
+
+        #d3 {
+            width: 500px;
+            height: 700px;
+            background-color: black;
+            background-image: url(../../resource/image/云缨.jpg);
+            background-repeat: no-repeat;
+            /*等比例放入背景区，到最短边结束，可能部分背景区空白*/
+            background-size: 100%;
+        }
+
+        #d4 {
+            width: 700px;
+            height: 700px;
+            background-color: black;
+            background-image: url(../../resource/image/云缨.jpg);
+            background-repeat: no-repeat;
+            /*按设定尺寸放入背景区，尺寸小则空白，尺寸大则看不见*/
+            background-size: 800px 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+</body>
+
+</html>

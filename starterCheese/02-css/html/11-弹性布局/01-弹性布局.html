@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>弹性布局</title>
+    <!-- 父级元素设置display属性flex值，子级元素可以自动挤压或拉伸 -->
+    <style>
+        /*弹性容器*/
+        .content {
+            display: flex;
+            width: auto;
+            height: 300px;
+            border: 1px solid red;
+        }
+
+        /*弹性盒子，默认沿主轴排列*/
+        /*主轴默认水平，从左至右；侧轴默认竖直，从上至下*/
+        .content div {
+            /*宽度自动挤压*/
+            width: 200px;
+            /*高度自动拉伸*/
+            /*height: 100px;*/
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型-边框线</title>
+    <!-- border: 粗细 样式 颜色; -->
+    <!-- 样式：solid实现 dashed虚线 dotted点线 -->
+    <!-- 边框线会撑大盒子，border-box会自动减小内容尺寸使盒子大小不变，默认值为content-box -->
+    <style>
+        #d1 {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+
+            /*四个方向同时设置*/
+            border: 4px solid red;
+            box-sizing: border-box;
+
+            color: white;
+        }
+
+        #d2 {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+
+            /*四个方向单独设置：上top 右right 下bottom 左left*/
+            border-top: 4px dashed green;
+            border-right: 4px dashed yellow;
+            border-bottom: 4px dotted orange;
+            border-left: 4px dotted red;
+            box-sizing: border-box;
+
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1">d1</div>
+    <div id="d2">d2</div>
+</body>
+
+</html>

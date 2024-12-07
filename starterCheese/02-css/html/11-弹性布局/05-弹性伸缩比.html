@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>弹性伸缩比</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .f1 {
+            display: flex;
+            width: auto;
+            height: 200px;
+            border: 1px red solid;
+        }
+
+        .f2 {
+            display: flex;
+            width: auto;
+            height: 200px;
+            border: 1px red solid;
+        }
+
+        .f3 {
+            display: flex;
+            flex-direction: column;
+            width: auto;
+            height: 200px;
+            border: 1px red solid;
+        }
+
+        /*在弹性布局中，如果弹性盒子没有宽高，主轴方向盒子由内容撑开，侧轴方向盒子拉伸*/
+        .s1 {
+            background-color: pink;
+        }
+
+        /*在弹性布局中，如果弹性盒子没有宽高，flex控制弹性盒子主轴方向的尺寸，值为数字，表示占父级元素剩余尺寸的份数*/
+        .s2 {
+            flex: 1;
+            background-color: pink;
+        }
+
+        .s3 {
+            flex: 2;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="f1">
+        <div class="s1">1</div>
+        <div class="s1">2</div>
+        <div class="s1">3</div>
+    </div>
+    <div class="f2">
+        <div class="s1">1</div>
+        <div class="s2">2</div>
+        <div class="s3">3</div>
+    </div>
+    <div class="f3">
+        <div class="s1">1</div>
+        <div class="s2">2</div>
+        <div class="s3">3</div>
+    </div>
+</body>
+
+</html>

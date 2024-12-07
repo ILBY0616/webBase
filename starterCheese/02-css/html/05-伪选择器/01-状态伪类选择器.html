@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器</title>
+    <!-- 当选择器为某状态时展示的样式 -->
+    <!-- 如果需要给超链接设置四个状态，需要按照link visited hover active顺序书写 -->
+    <style>
+        /*访问前*/
+        a:link {
+            color: red;
+        }
+
+        /*访问后*/
+        a:visited {
+            color: orange;
+        }
+
+        /*悬停时*/
+        a:hover {
+            color: yellow;
+        }
+
+        /*点击时*/
+        a:active {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../01-初识css/01-体验CSS.html">伪类选择器：红 橙 黄 绿</a>
+</body>
+
+</html>

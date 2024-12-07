@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>信息表验证</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <thead>
+                <tr>
+                    个人信息表
+                </tr>
+                <tr>
+                    <td colspan="2">请输入你的个人信息</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: right">
+                        姓名：
+                    </td>
+                    <td>
+                        <label>
+                            <input type="text" id="name">
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        性别：
+                    </td>
+                    <td id="gender">
+                        <label>
+                            <input type="radio" name="gender" checked value="男">男
+                            <input type="radio" name="gender" value="女">女
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        学历：
+                    </td>
+                    <td>
+                        <label>
+                            <select id="degree">
+                                <option selected>学士</option>
+                                <option>硕士</option>
+                                <option>博士</option>
+                            </select>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        爱好：
+                    </td>
+                    <td id="prefer">
+                        <label>
+                            <input type="checkbox" checked value="看电影">看电影
+                            <input type="checkbox" value="听音乐">听音乐
+                            <input type="checkbox" value="打篮球">打篮球
+                            <input type="checkbox" value="玩游戏">玩游戏
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        地址：
+                    </td>
+                    <td>
+                        <label>
+                            <input type="text">
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        电话：
+                    </td>
+                    <td>
+                        <label>
+                            <input type="text" id="telephone">
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        QQ：
+                    </td>
+                    <td>
+                        <label>
+                            <input type="text" id="qq">
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        请上传你的头像：
+                    </td>
+                    <td>
+                        <label>
+                            <input type="file" multiple>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        自我评价：
+                    </td>
+                    <td>
+                        <label>
+                            <textarea cols="30" rows="5" style="text-align: left"></textarea>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center">
+                        <button type="submit" id="submit">提交</button>
+                        <button type="reset">重置</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" style="text-align: center">
+                        ©班级：软工21101班 学号：202114060108 姓名：邱鹏
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center">
+                        时间：2023.12.15
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</body>
+<script>
+    document.getElementById("submit").onclick = function (event) {
+        event.preventDefault();
+        let name, gender, degree, prefer, telephone, qq;
+        name = document.getElementById("name").value;
+        gender = document.querySelector('input[name="gender"]:checked').value;
+        degree = document.getElementById("degree").value;
+        prefer = getCheckedValues(document.querySelectorAll("#prefer input[type='checkbox']:checked"));
+        telephone = document.getElementById("telephone").value;
+        qq = document.getElementById("qq").value;
+        if (validForm(name, gender, degree, prefer, telephone, qq)) {
+            alert("个人信息：\n姓名：" + name + "\n性别：" + gender + "\n学历：" + degree + "\n爱好：" + prefer +
+                "\n电话：" + telephone + "\nQQ：" + qq);
+        }
+    }
+
+    function getCheckedValues(elements) {
+        let values = [];
+        elements.forEach(function (element) {
+            values.push(element.value);
+        });
+        return values.join(", ");
+    }
+
+    function validForm(name, gender, degree, prefer, telephone, qq) {
+        if (name === "") {
+            alert("请输入姓名。");
+            return false;
+        }
+        if (gender === null) {
+            alert("请选择性别。");
+            return false;
+        }
+        if (degree === null) {
+            alert("请选择学历。");
+            return false;
+        }
+        if (prefer === "") {
+            alert("请选择爱好。");
+            return false;
+        }
+        if (telephone === "") {
+            alert("请输入电话。");
+            return false;
+        }
+        if (qq === "") {
+            alert("请输入QQ。");
+            return false;
+        }
+        if (!name.match(/^[a-zA-Z][a-zA-Z0-9]{4,9}$/)) {
+            alert("姓名格式不正确！");
+            return false;
+        }
+        if (!telephone.match(/^\d{11}$/)) {
+            alert("电话格式不正确！");
+            return false;
+        }
+        if (!qq.match(/^\d{5,12}$/)) {
+            alert("QQ格式不正确！");
+            return false;
+        }
+        return true;
+    }
+</script>
+
+</html>
