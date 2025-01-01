@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-if-else</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <!-- 添加或移除标签本体 -->
+    <div id="app">
+        <p v-if="condition == 1">现在你看到我了</p>
+        <p v-else-if="condition == 2">看不到我看不到我</p>
+        <p v-else>猜猜我在哪</p>
+        <button @click="changeStatus">切换显示状态</button>
+    </div>
+</body>
+
+<script>
+    let app = new Vue({
+        el: '#app',
+        data: {
+            condition: 1
+        },
+        methods: {
+            changeStatus: function () {
+                this.condition = Math.floor(Math.random() * 3) + 1;
+            }
+        }
+    })
+</script>
+
+</html>
